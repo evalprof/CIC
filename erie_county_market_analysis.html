@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erie County Ambulatory Care Market Analysis - Strategic Funding Recommendations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 280px;
+            background-color: #8b0000;
+            color: white;
+            padding: 30px 20px;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ff6b6b;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+        }
+
+        .sidebar nav ul li {
+            margin-bottom: 12px;
+        }
+
+        .sidebar nav ul li a {
+            color: #ffcccc;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            padding: 8px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar nav ul li a:hover {
+            background-color: #a52a2a;
+            color: white;
+        }
+
+        .sidebar nav ul li a.active {
+            background-color: #ff6b6b;
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 40px 50px;
+            overflow-y: auto;
+        }
+
+        /* Header */
+        .report-header {
+            border-bottom: 4px solid #8b0000;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .crisis-badge {
+            display: inline-block;
+            background-color: #8b0000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .report-header h1 {
+            font-size: 32px;
+            color: #8b0000;
+            margin-bottom: 10px;
+        }
+
+        .report-header h2 {
+            font-size: 24px;
+            color: #555;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .meta-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            font-size: 14px;
+            color: #666;
+            margin-top: 15px;
+        }
+
+        .meta-info div {
+            padding: 5px 0;
+        }
+
+        .meta-info strong {
+            color: #8b0000;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 40px;
+            scroll-margin-top: 20px;
+        }
+
+        .section h3 {
+            font-size: 22px;
+            color: #8b0000;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .section h4 {
+            font-size: 18px;
+            color: #a52a2a;
+            margin: 20px 0 10px 0;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Critical Alert Box */
+        .critical-box {
+            background-color: #ffebee;
+            border-left: 5px solid #8b0000;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .critical-box h4 {
+            color: #8b0000;
+            margin-top: 0;
+        }
+
+        /* Strategic Options Box */
+        .option-box {
+            background-color: #f5f5f5;
+            border-left: 5px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .option-box h4 {
+            color: #2196f3;
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .option-box .investment-amount {
+            background-color: #2196f3;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+
+        table th {
+            background-color: #8b0000;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        table td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        table tr:hover {
+            background-color: #fff5f5;
+        }
+
+        table tr.crisis {
+            background-color: #ffebee;
+        }
+
+        table tr.performing {
+            background-color: #e8f5e9;
+        }
+
+        /* Alert Boxes */
+        .alert {
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            border-left: 5px solid;
+        }
+
+        .alert-danger {
+            background-color: #ffebee;
+            border-left-color: #f44336;
+            color: #c62828;
+        }
+
+        .alert-warning {
+            background-color: #fff3e0;
+            border-left-color: #ff9800;
+            color: #e65100;
+        }
+
+        .alert-success {
+            background-color: #e8f5e9;
+            border-left-color: #4caf50;
+            color: #2e7d32;
+        }
+
+        .alert-info {
+            background-color: #e3f2fd;
+            border-left-color: #2196f3;
+            color: #1565c0;
+        }
+
+        .alert strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        ul li, ol li {
+            margin-bottom: 8px;
+        }
+
+        /* Evidence List */
+        .evidence-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .evidence-list li {
+            padding: 10px;
+            margin-bottom: 8px;
+            background-color: #fff9f0;
+            border-left: 3px solid #ff9800;
+            border-radius: 3px;
+        }
+
+        /* Do/Don't Boxes */
+        .recommendation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .do-box {
+            background-color: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .do-box h4 {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+
+        .dont-box {
+            background-color: #ffebee;
+            border: 2px solid #f44336;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .dont-box h4 {
+            color: #c62828;
+            margin-top: 0;
+        }
+
+        /* Phase Timeline */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 20px 0;
+        }
+
+        .timeline-item {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #2196f3;
+            border-radius: 4px;
+        }
+
+        .timeline-item h4 {
+            color: #2196f3;
+            margin-top: 0;
+        }
+
+        /* Questions Grid */
+        .questions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .question-item {
+            padding: 15px;
+            background-color: #fff9f0;
+            border-radius: 4px;
+            border-left: 3px solid #ff9800;
+        }
+
+        /* Final Recommendation Box */
+        .final-recommendation {
+            background: linear-gradient(135deg, #8b0000 0%, #a52a2a 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .final-recommendation h3 {
+            color: white;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .final-recommendation h4 {
+            color: #ffcccc;
+        }
+
+        .final-recommendation ul {
+            color: white;
+        }
+
+        /* Utility Classes */
+        .highlight-red {
+            color: #8b0000;
+            font-weight: bold;
+        }
+
+        .highlight-green {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .report-footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .main-content {
+                padding: 30px 20px;
+            }
+
+            .recommendation-grid,
+            .questions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .sidebar {
+                display: none;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #a52a2a;">
+                <a href="index.html" style="display: block; padding: 10px; background-color: #a52a2a; color: white; text-decoration: none; border-radius: 4px; text-align: center; font-size: 14px; transition: background-color 0.3s;">
+                    ← Back to Reports
+                </a>
+            </div>
+            
+            <h2>Analysis Navigation</h2>
+            <nav>
+                <ul>
+                    <li><a href="#header">Executive Summary</a></li>
+                    <li><a href="#crisis">Market Crisis Indicators</a></li>
+                    <li><a href="#root-cause">Root Cause Analysis</a></li>
+                    <li><a href="#recommendations">Strategic Recommendations</a></li>
+                    <li><a href="#options">Strategic Options</a></li>
+                    <li><a href="#action-plan">Immediate Action Plan</a></li>
+                    <li><a href="#questions">Critical Questions</a></li>
+                    <li><a href="#final">Final Recommendation</a></li>
+                </ul>
+            </nav>
+            
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #a52a2a;">
+                <button onclick="printReport()" style="width: 100%; padding: 10px; background-color: #ff6b6b; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+                    🖨️ Print Analysis
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Report Header -->
+            <header class="report-header" id="header">
+                <div class="crisis-badge">⚠️ SECTOR-WIDE MARKET FAILURE ALERT</div>
+                <h1>Strategic Funding Recommendations</h1>
+                <h2>Erie County Ambulatory & Primary Care Market Analysis</h2>
+                
+                <div class="meta-info">
+                    <div><strong>Market:</strong> Erie County, Pennsylvania</div>
+                    <div><strong>Sector:</strong> Ambulatory & Primary Care</div>
+                    <div><strong>Organizations Analyzed:</strong> 8 nonprofits</div>
+                    <div><strong>Combined Budget:</strong> $39.2 million</div>
+                    <div><strong>Population Served:</strong> 80,000-146,000 residents</div>
+                    <div><strong>Analysis Date:</strong> October 2025</div>
+                    <div><strong>Data Source:</strong> Tax Years 2022-2023</div>
+                    <div><strong>Crisis Level:</strong> Critical - 75% in decline</div>
+                </div>
+            </header>
+
+            <!-- Critical Market Insight -->
+            <section class="section" id="crisis">
+                <div class="critical-box">
+                    <h3>CRITICAL MARKET INSIGHT: SECTOR-WIDE COLLAPSE IN HIGH-NEED MARKET</h3>
+                    <p style="font-size: 18px; font-weight: 600; margin-top: 15px;">This is NOT an isolated organizational problem. This is a systemic market failure affecting 75% of Erie County's ambulatory and primary care safety-net infrastructure.</p>
+                </div>
+
+                <h3>Market-Wide Crisis Indicators</h3>
+                
+                <p><strong>All 8 Erie County Ambulatory & Primary Care Nonprofits:</strong></p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Organization</th>
+                            <th>Budget</th>
+                            <th>Score</th>
+                            <th>Status</th>
+                            <th>Impact</th>
+                            <th>ADI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="performing">
+                            <td><strong>St Pauls Free Clinic Inc</strong></td>
+                            <td>$389K</td>
+                            <td><strong>93</strong></td>
+                            <td>✓ Advancing</td>
+                            <td>91</td>
+                            <td>79</td>
+                        </tr>
+                        <tr class="performing">
+                            <td><strong>St Pauls Clinic Foundation</strong></td>
+                            <td>$280K</td>
+                            <td><strong>61</strong></td>
+                            <td>✓ Growing</td>
+                            <td>87</td>
+                            <td>79</td>
+                        </tr>
+                        <tr class="crisis">
+                            <td>Community Health Net</td>
+                            <td>$14.2M</td>
+                            <td>40</td>
+                            <td>⚠ Reducing</td>
+                            <td>91</td>
+                            <td>79</td>
+                        </tr>
+                        <tr class="crisis">
+                            <td>VISITING NURSE ASSOCIATION</td>
+                            <td>$9.7M</td>
+                            <td>37</td>
+                            <td>⚠ Reducing</td>
+                            <td>90</td>
+                            <td>75</td>
+                        </tr>
+                        <tr class="crisis">
+                            <td>JOHN F KENNEDY CENTER</td>
+                            <td>$1.0M</td>
+                            <td>31</td>
+                            <td>⚠ Reducing</td>
+                            <td>86</td>
+                            <td>81</td>
+                        </tr>
+                        <tr class="crisis">
+                            <td>MEDICAL ASSOCIATES OF ERIE</td>
+                            <td>$12.1M</td>
+                            <td>31</td>
+                            <td>⚠ Reducing</td>
+                            <td>89</td>
+                            <td>74</td>
+                        </tr>
+                        <tr class="crisis">
+                            <td>Susquehanna/Inspirit</td>
+                            <td>$14K</td>
+                            <td>31</td>
+                            <td>⚠ Reducing</td>
+                            <td>72</td>
+                            <td>74</td>
+                        </tr>
+                        <tr class="crisis">
+                            <td>UNITED NEIGHBORHOOD FACILITIES</td>
+                            <td>$1.5M</td>
+                            <td>30</td>
+                            <td>⚠ Reducing</td>
+                            <td>87</td>
+                            <td>82</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="alert alert-danger">
+                    <strong>Combined Market Profile:</strong>
+                    $39.2M serving exceptionally high-need population (ADI 74-82, Well-Being 19-27)
+                </div>
+
+                <h4>What This Means</h4>
+                <ul>
+                    <li><strong class="highlight-red">6 of 8 organizations (75%) in active decline</strong> ("Reducing" status)</li>
+                    <li><strong class="highlight-red">5 organizations scoring 30-40</strong> (all below 40-60 threshold, facing decline trajectory)</li>
+                    <li><strong>ALL 8 organizations serving high-need communities</strong> (ADI 74-82 = top quartile deprivation)</li>
+                    <li><strong>Combined Impact Potential: 86-91</strong> (Exceptional) across nearly all organizations</li>
+                    <li><strong>Market serves 80,000-146,000 residents</strong> depending on service area overlap</li>
+                    <li><strong>Two financing models, both failing:</strong>
+                        <ul>
+                            <li>Government grant dependent (3 orgs at 85-99% dependency)</li>
+                            <li>Medicaid reimbursement dependent (4 orgs relying on program service fees)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Only 2 organizations performing:</strong> St Pauls Free Clinic (93 score, but 99.98% government dependent) and St Pauls Foundation (61 score, supporting the clinic)</li>
+                </ul>
+
+                <div class="critical-box">
+                    <p style="font-size: 16px;"><strong>This indicates SYSTEMIC MARKET FAILURE requiring sector-level strategic intervention, not individual organizational capacity building.</strong></p>
+                </div>
+            </section>
+
+            <!-- Root Cause Analysis -->
+            <section class="section" id="root-cause">
+                <h3>Root Cause Analysis</h3>
+
+                <h4>Hypothesis 1: Post-COVID Government Funding Cliff (Primary Cause)</h4>
+                
+                <p><strong>Evidence:</strong></p>
+                <ul class="evidence-list">
+                    <li>3 organizations showing 85-99% government grant dependency</li>
+                    <li>Tax years 2022-2023 (immediate post-COVID funding expiration period)</li>
+                    <li>St Pauls Free Clinic at catastrophic 99.98% federal dependency</li>
+                    <li>United Neighborhood Facilities at 98% government funding</li>
+                    <li>JFK Center at 85% government funding</li>
+                    <li>All three in "Reducing" status EXCEPT St Pauls Clinic (performing despite vulnerability)</li>
+                </ul>
+
+                <p><strong>Likely Causes:</strong></p>
+                <ul>
+                    <li>Emergency federal COVID-19 healthcare grants expired 2022-2023</li>
+                    <li>State budget cuts to safety-net healthcare following federal fund drawdown</li>
+                    <li>One-time ARPA funds not replaced with sustainable state/local funding</li>
+                    <li>Organizations built operating models around temporary emergency funding levels</li>
+                </ul>
+
+                <h4>Hypothesis 2: Medicaid Reimbursement Rate Crisis (Contributing Factor)</h4>
+                
+                <p><strong>Evidence:</strong></p>
+                <ul class="evidence-list">
+                    <li>4 large organizations ($9.7M-$14.2M budgets) generating 60-90% revenue from "Program Service Fees"</li>
+                    <li>All 4 in "Reducing" status despite massive scale</li>
+                    <li>Community Health Net: $14.2M budget, 40 score, Reducing</li>
+                    <li>VNA of Erie County: $9.7M budget, 37 score, Reducing</li>
+                    <li>Medical Associates: $12.1M budget, 31 score, Reducing</li>
+                    <li>Combined $36M in operations, all failing simultaneously</li>
+                </ul>
+
+                <p><strong>Impact:</strong></p>
+                <p>Pennsylvania Medicaid reimbursement rates fail to cover true cost of care for low-income populations. Organizations scale up on insufficient per-visit payments, creating structural deficits masked temporarily by reserves. As reserves deplete (visible in declining net assets across these organizations), collapse accelerates. Fee-for-service model doesn't work in high-need, complex-care populations requiring extensive coordination and wrap-around support.</p>
+
+                <h4>Hypothesis 3: Economic Depression in Erie County (Systemic Context)</h4>
+                
+                <p><strong>Evidence:</strong></p>
+                <ul class="evidence-list">
+                    <li>ALL 8 organizations serve communities with ADI 74-82 (top quartile deprivation)</li>
+                    <li>Well-Being scores 19-27 (Very Low across all)</li>
+                    <li>Population density ranging from Small Town to Major Metropolitan, but consistent poverty</li>
+                    <li>Individual donor revenue near-zero across most organizations</li>
+                    <li>"Resource-Constrained" context mentioned in multiple organizational reports</li>
+                    <li>Total market only $39M serving 100,000+ high-need residents = severe underfunding</li>
+                </ul>
+
+                <p><strong>Impact:</strong></p>
+                <p>Erie County's economic depression creates perfect storm: (1) highest healthcare needs, (2) lowest ability to pay, (3) minimal philanthropic capacity, (4) declining tax base reducing government support. Healthcare demand exceeds any realistic nonprofit funding model capacity.</p>
+
+                <h4>Hypothesis 4: Market Oversaturation (Secondary Factor)</h4>
+                
+                <p><strong>Evidence:</strong></p>
+                <ul class="evidence-list">
+                    <li>8 organizations competing in same county for same funding and patient population</li>
+                    <li>Combined service overlap likely significant</li>
+                    <li>Organizations note 7 "similar programs" in market</li>
+                    <li>No single organization has dominant market position</li>
+                    <li>Fixed philanthropic and government pools split 8 ways</li>
+                </ul>
+
+                <p><strong>Impact:</strong></p>
+                <p>Even with increased funding, 8 organizations may be too many for Erie County to sustain. However, this is SECONDARY to the fundamental funding inadequacy problem. Market could support 4-5 well-resourced providers, not 8 under-resourced ones.</p>
+            </section>
+
+            <!-- Strategic Recommendations -->
+            <section class="section" id="recommendations">
+                <h3>Strategic Recommendations</h3>
+
+                <div class="recommendation-grid">
+                    <div class="dont-box">
+                        <h4>❌ DO NOT: Fund Individual Organizations in Isolation</h4>
+                        <p><strong>Why This Fails:</strong></p>
+                        <ul style="font-size: 13px;">
+                            <li>St Pauls Free Clinic's 99.98% government dependency isn't an organizational failure—it reflects systemic collapse</li>
+                            <li>Individual capacity building cannot solve problems caused by federal/state policy, Medicaid rates, economic depression, or market oversaturation</li>
+                            <li>$50K-$125K investment in one organization = rearranging deck chairs while 6 others sink</li>
+                            <li>No amount of "better fundraising" can compensate for $39M underfunded market</li>
+                            <li>Success of 2 St Pauls organizations proves capacity exists—vulnerability proves SYSTEM doesn't work</li>
+                            <li>Individual donor cultivation in ADI 79-82 communities facing economic depression is unrealistic</li>
+                        </ul>
+                    </div>
+
+                    <div class="do-box">
+                        <h4>✅ DO: Commission Ecosystem Assessment</h4>
+                        <p><strong>Investment: $75K-$100K | Timeline: 4-5 months</strong></p>
+                        <p><strong>Scope:</strong></p>
+                        <ul style="font-size: 13px;">
+                            <li>Operational verification (how many still operational?)</li>
+                            <li>Market dynamics analysis (funding changes, policy shifts)</li>
+                            <li>Community service gaps (unmet needs, access barriers)</li>
+                            <li>Strategic options evaluation</li>
+                        </ul>
+                        <p style="margin-top: 10px;"><strong>Deliverable:</strong> Comprehensive report with prioritized recommendation for strategic intervention</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Strategic Options -->
+            <section class="section" id="options">
+                <h3>Strategic Options</h3>
+
+                <div class="option-box">
+                    <h4>OPTION A: Market Consolidation/Merger</h4>
+                    <div class="investment-amount">Investment: $300K-$500K over 24-36 months</div>
+                    
+                    <p><strong>Structure:</strong></p>
+                    <ul>
+                        <li>Merge 3-4 struggling small/medium organizations (United Neighborhood $1.5M + JFK Center $1.0M + Susquehanna $14K + possibly St Pauls entities $670K = $3.2M combined)</li>
+                        <li>Create single entity with $2.5M+ operating budget (30% overhead reduction through consolidation)</li>
+                        <li>Leverage St Pauls Free Clinic's exceptional performance (93 score) as operational model</li>
+                        <li>Transfer best practices from high performers to consolidated entity</li>
+                        <li>Maintain 3-4 well-resourced providers rather than 8 under-resourced ones</li>
+                    </ul>
+
+                    <p><strong>Investment Breakdown:</strong></p>
+                    <ul>
+                        <li>Merger consultant/facilitation: $75K-$100K</li>
+                        <li>Legal/regulatory compliance: $50K-$75K</li>
+                        <li>Technology integration: $50K-$75K</li>
+                        <li>Change management/staff transition: $75K-$100K</li>
+                        <li>Working capital bridge: $50K-$150K</li>
+                    </ul>
+
+                    <p><strong>Success Metrics:</strong></p>
+                    <ul>
+                        <li>Consolidated entity achieves 60+ score within 18 months</li>
+                        <li>30%+ reduction in duplicated administrative costs</li>
+                        <li>Maintained or increased patient access</li>
+                        <li>Revenue diversification to <75% single-source dependency</li>
+                    </ul>
+
+                    <p><strong>Risk:</strong> Cultural resistance, board conflicts, service disruption during transition</p>
+                </div>
+
+                <div class="option-box">
+                    <h4>OPTION B: Health System/FQHC Conversion/Acquisition</h4>
+                    <div class="investment-amount">Investment: $150K-$250K over 12-18 months</div>
+                    
+                    <p><strong>Structure:</strong></p>
+                    <ul>
+                        <li>Facilitate partnership between 3-4 struggling nonprofits and UPMC, Allegheny Health Network, or existing FQHC</li>
+                        <li>Convert qualifying organizations to FQHC status (enhanced federal funding, 100% Medicaid reimbursement, sliding-fee scale flexibility)</li>
+                        <li>Health system provides: financial backing, infrastructure, billing systems, compliance support</li>
+                        <li>Nonprofits preserve: mission focus, community governance, cultural competency, volunteer networks</li>
+                    </ul>
+
+                    <p><strong>Investment Breakdown:</strong></p>
+                    <ul>
+                        <li>FQHC conversion feasibility study: $30K-$50K</li>
+                        <li>Application preparation and regulatory navigation: $50K-$75K</li>
+                        <li>Health system partnership negotiation support: $25K-$40K</li>
+                        <li>Community engagement and change management: $25K-$50K</li>
+                        <li>Bridge funding during transition: $20K-$35K</li>
+                    </ul>
+
+                    <p><strong>Success Metrics:</strong></p>
+                    <ul>
+                        <li>FQHC designation achieved within 12-18 months</li>
+                        <li>40%+ increase in federal funding through FQHC mechanisms</li>
+                        <li>Financial stability achieved through enhanced reimbursement</li>
+                        <li>Mission preservation through governance agreements</li>
+                    </ul>
+
+                    <p><strong>Risk:</strong> Mission drift, loss of community control, health system backing out</p>
+                </div>
+
+                <div class="option-box">
+                    <h4>OPTION C: Managed Wind-Down with Strategic Preservation</h4>
+                    <div class="investment-amount">Investment: $200K-$300K over 18-24 months</div>
+                    
+                    <p><strong>Structure:</strong></p>
+                    <ul>
+                        <li>Orderly closure of 4-5 most vulnerable organizations</li>
+                        <li>Transfer patients/clients to 3 strongest providers (St Pauls Free Clinic, St Pauls Foundation, one other)</li>
+                        <li>Concentrate $39M market into $25-30M operated by fewer, stronger organizations</li>
+                        <li>Preserve employment for critical clinical staff</li>
+                        <li>Transfer assets, donor relationships, and community trust to surviving entities</li>
+                    </ul>
+
+                    <p><strong>Investment Breakdown:</strong></p>
+                    <ul>
+                        <li>Patient care transition coordination: $75K-$100K</li>
+                        <li>Legal/regulatory wind-down support: $40K-$60K</li>
+                        <li>Staff severance and placement: $50K-$75K</li>
+                        <li>Asset transfer and donor relationship management: $20K-$30K</li>
+                        <li>Community communication and trust preservation: $15K-$35K</li>
+                    </ul>
+
+                    <p><strong>Success Metrics:</strong></p>
+                    <ul>
+                        <li>Zero patients lose access to primary care</li>
+                        <li>3 surviving organizations achieve 60+ scores within 18 months</li>
+                        <li>$10-15M in duplicated costs eliminated</li>
+                        <li>Community trust maintained through transparent process</li>
+                    </ul>
+
+                    <p><strong>Risk:</strong> Perceived failure, community backlash, access gaps if transfers incomplete</p>
+                </div>
+
+                <div class="option-box">
+                    <h4>OPTION D: State Policy Advocacy Campaign</h4>
+                    <div class="investment-amount">Investment: $75K-$125K over 12-18 months</div>
+                    
+                    <p><strong>Structure:</strong></p>
+                    <ul>
+                        <li>Hire advocacy firm/lobbyist to secure Pennsylvania legislative changes:
+                            <ul>
+                                <li>15-20% Medicaid ambulatory care rate increase</li>
+                                <li>State match for safety-net healthcare stabilization fund</li>
+                                <li>Tax incentives for healthcare donations to high-need communities</li>
+                            </ul>
+                        </li>
+                        <li>Build coalition across all 8 Erie County providers + statewide partners</li>
+                        <li>Document economic impact of primary care collapse (ER costs, preventable hospitalizations)</li>
+                        <li>Leverage exceptional impact potential (86-91) to demonstrate ROI of public investment</li>
+                    </ul>
+
+                    <p><strong>Investment Breakdown:</strong></p>
+                    <ul>
+                        <li>Advocacy firm retainer: $40K-$60K</li>
+                        <li>Economic impact study: $15K-$25K</li>
+                        <li>Coalition building and coordination: $10K-$20K</li>
+                        <li>Stakeholder engagement: $10K-$20K</li>
+                    </ul>
+
+                    <p><strong>Success Metrics:</strong></p>
+                    <ul>
+                        <li>Medicaid rate increase of 15-20% secured within 18 months</li>
+                        <li>New state safety-net stabilization funding of $5-10M annually</li>
+                        <li>All 8 organizations showing stabilized or improved financial health</li>
+                    </ul>
+
+                    <p><strong>Risk:</strong> Long timeline, political uncertainty, no guarantee of success, organizations may collapse before policy change achieved</p>
+                </div>
+
+                <div class="option-box">
+                    <h4>OPTION E: Hybrid Federal/Philanthropic Capitalization Model</h4>
+                    <div class="investment-amount">Investment: $400K-$600K over 36 months</div>
+                    
+                    <p><strong>Structure:</strong></p>
+                    <ul>
+                        <li>Create Erie County Primary Care Collaborative as fiscal sponsor/funding intermediary</li>
+                        <li>Aggregate $39M market under unified fundraising and contracting umbrella</li>
+                        <li>Pool back-office functions (billing, HR, IT, compliance) while preserving frontline service identities</li>
+                        <li>Pursue federal grants (HRSA, HHS) available only to larger-scale entities</li>
+                        <li>Build philanthropic fundraising capacity at collaborative level (donors invest in ecosystem, not individual orgs)</li>
+                        <li>Negotiate collective Medicaid managed care contracts with enhanced rates</li>
+                    </ul>
+
+                    <p><strong>Investment Breakdown:</strong></p>
+                    <ul>
+                        <li>Collaborative formation and legal structure: $50K-$75K</li>
+                        <li>Shared services infrastructure: $100K-$150K</li>
+                        <li>Federal grant application support: $50K-$75K</li>
+                        <li>Fundraising infrastructure and major gifts campaign: $100K-$150K</li>
+                        <li>Change management and implementation: $100K-$150K</li>
+                    </ul>
+
+                    <p><strong>Success Metrics:</strong></p>
+                    <ul>
+                        <li>$5-10M in new federal funding secured within 24 months</li>
+                        <li>$2-3M in new philanthropic revenue generated</li>
+                        <li>40%+ reduction in duplicated administrative costs</li>
+                        <li>All member organizations achieve stabilization (50+ scores)</li>
+                    </ul>
+
+                    <p><strong>Risk:</strong> Complex coordination, cultural resistance, long implementation timeline</p>
+                </div>
+            </section>
+
+            <!-- Immediate Action Plan -->
+            <section class="section" id="action-plan">
+                <h3>Immediate Action Plan</h3>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Phase 1: Ecosystem Assessment (Months 1-5) - $75K-$100K</h4>
+                        
+                        <p><strong>Weeks 1-4: Rapid Verification</strong></p>
+                        <ul>
+                            <li>Contact all 8 organizations to verify operational status</li>
+                            <li>Request most recent financials (2024-2025)</li>
+                            <li>Assess immediate crisis situations requiring emergency intervention</li>
+                            <li>Map current patient census and access gaps</li>
+                            <li><strong>Deliverable:</strong> Rapid assessment brief with triage recommendations</li>
+                        </ul>
+
+                        <p><strong>Weeks 5-20: Comprehensive Assessment</strong></p>
+                        <ul>
+                            <li>Commission full ecosystem study per scope above</li>
+                            <li>Engage consultant team with healthcare systems expertise</li>
+                            <li>Include stakeholder engagement (50+ interviews)</li>
+                            <li>Financial modeling of all 5 strategic options</li>
+                            <li><strong>Deliverable:</strong> Full report with prioritized recommendations</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Phase 2: Strategic Decision (Month 6)</h4>
+                        
+                        <p><strong>Based on assessment findings, select primary intervention strategy:</strong></p>
+                        <ul>
+                            <li>If government funding stable + cultural openness: <strong>Option A (Consolidation)</strong> - $300K-$500K</li>
+                            <li>If FQHC eligible + health system interest: <strong>Option B (FQHC Conversion)</strong> - $150K-$250K</li>
+                            <li>If market cannot sustain 8 providers: <strong>Option C (Managed Wind-Down)</strong> - $200K-$300K</li>
+                            <li>If policy change achievable + timeline permits: <strong>Option D (Advocacy)</strong> - $75K-$125K</li>
+                            <li>If ecosystem collaboration possible: <strong>Option E (Hybrid Model)</strong> - $400K-$600K</li>
+                        </ul>
+
+                        <div class="alert alert-info" style="margin-top: 15px;">
+                            <strong>Note:</strong> May require COMBINATION approach (e.g., Options A + D: consolidation PLUS advocacy, or Options B + C: FQHC conversion for some, wind-down for others)
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Phase 3: Implementation (Months 7-36+)</h4>
+                        
+                        <p>Execute chosen strategy with clear milestones, quarterly assessments, and adaptation protocols.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Critical Questions -->
+            <section class="section" id="questions">
+                <h3>Critical Questions Before Individual Org Funding</h3>
+
+                <div class="questions-grid">
+                    <div class="question-item">
+                        <strong>1.</strong> How many of the 8 organizations are still operating at October 2025? (Data is 22 months old)
+                    </div>
+                    <div class="question-item">
+                        <strong>2.</strong> Has government funding been restored or permanently reduced? (Critical for 85-99% dependent organizations)
+                    </div>
+                    <div class="question-item">
+                        <strong>3.</strong> Have Pennsylvania Medicaid rates improved? (Affects 4 large program-fee dependent organizations)
+                    </div>
+                    <div class="question-item">
+                        <strong>4.</strong> Can Erie County realistically support 8 primary care nonprofits? (Or is consolidation inevitable?)
+                    </div>
+                    <div class="question-item">
+                        <strong>5.</strong> What is the true minimum viable number of providers? (4? 5? 6?)
+                    </div>
+                    <div class="question-item">
+                        <strong>6.</strong> Are commercial health systems or FQHCs willing to acquire/partner? (Could provide stability)
+                    </div>
+                    <div class="question-item">
+                        <strong>7.</strong> What do patients actually need most? (Service types, access barriers, cultural considerations)
+                    </div>
+                    <div class="question-item">
+                        <strong>8.</strong> Is this a permanently solvable problem given Erie County economics? (Or will nonprofit model always fail here?)
+                    </div>
+                    <div class="question-item">
+                        <strong>9.</strong> What happens if all 6 struggling organizations close? (Can 2 organizations serve 100,000+ residents?)
+                    </div>
+                    <div class="question-item">
+                        <strong>10.</strong> Who else is willing to invest in systemic solution? (Other foundations, health system, government?)
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final Recommendation -->
+            <section class="section" id="final">
+                <div class="final-recommendation">
+                    <h3>Final Recommendation</h3>
+
+                    <h4>DO NOT fund St Pauls Free Clinic Inc in isolation, despite its exceptional 93 score and 91 impact potential.</h4>
+
+                    <p style="font-size: 18px; margin: 20px 0;"><strong>Instead: Invest $75K-$100K in comprehensive Erie County Ambulatory & Primary Care Ecosystem Assessment FIRST.</strong></p>
+
+                    <p>Following assessment, make strategic sector-level investment of $150K-$600K in one of five options (or combination approach).</p>
+
+                    <h4 style="margin-top: 30px;">Why This Approach Works:</h4>
+
+                    <p><strong>The Evidence:</strong></p>
+                    <ul>
+                        <li>6 of 8 organizations showing identical distress = systemic problem requiring systemic solution</li>
+                        <li>Combined $39M market with exceptional impact potential (86-91) serving highest-need population (ADI 74-82)</li>
+                        <li>Individual org investment = trying to diversify one organization's revenue while entire sector collapses</li>
+                        <li>St Pauls Free Clinic's 93 score proves organizational capacity exists—its 99.98% government dependency proves the SYSTEM doesn't work</li>
+                        <li>$75K assessment >> $125K wasted on doomed individual intervention</li>
+                        <li>Assessment reveals whether problem is solvable (Options A, B, E), requires strategic downsizing (Option C), or needs policy intervention (Option D) before committing major resources</li>
+                    </ul>
+
+                    <p><strong>The Stakes:</strong></p>
+                    <ul>
+                        <li>100,000+ Erie County residents depend on these 8 organizations for primary care</li>
+                        <li>Without strategic intervention, expect 4-6 closures within 24 months</li>
+                        <li>Healthcare access collapse creates cascading public health crisis and overwhelming ER costs</li>
+                        <li>Two organizations (St Pauls entities) performing well enough to anchor systemic solution if supported</li>
+                    </ul>
+
+                    <p><strong>The Opportunity:</strong></p>
+                    <ul>
+                        <li>Exceptional impact potential (86-91) + highest community need (ADI 74-82) = WHERE resources should flow</li>
+                        <li>Sector has proven capacity (2 orgs scoring 61-93) but broken funding model</li>
+                        <li>$500K strategic investment could stabilize $39M ecosystem serving 100,000+ residents</li>
+                        <li>Funder positions as regional healthcare equity leader, not tactical grantor</li>
+                    </ul>
+
+                    <div class="alert alert-success" style="margin-top: 30px; background-color: rgba(255,255,255,0.2); border-left-color: white; color: white;">
+                        <strong style="color: white; font-size: 18px;">The exceptional impact potential (91) of St Pauls Free Clinic serving a very high-need community (ADI 79, Well-Being 22) deserves investment—but only through strategic sector-level intervention that addresses the systemic market failure crushing 75% of Erie County's primary care safety net.</strong>
+                    </div>
+
+                    <p style="font-size: 16px; margin-top: 20px;"><strong>Timeline:</strong> Begin ecosystem assessment immediately (Month 1), make strategic investment decision by Month 6, implement solution through Month 36.</p>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="report-footer">
+                <p>Community Impact Compass (CIC) Strategic Market Analysis</p>
+                <p>Generated: October 2025 | Data Source: IRS Form 990 (Tax Years 2022-2023), American Community Survey, Precision Causal Modeling Analytics</p>
+                <div class="alert alert-warning" style="margin-top: 15px; text-align: left;">
+                    <strong>Data Lag Warning:</strong> Analysis based on Tax Year 2022-2023 data; current date October 2025; gap of 22-34 months. Situation may have worsened (more closures) or improved (consolidation occurred). Recommend rapid verification before proceeding.
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.sidebar nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    history.pushState(null, null, targetId);
+                }
+            });
+        });
+
+        // Highlight active section in navigation as user scrolls
+        function setActiveNavigation() {
+            const sections = document.querySelectorAll('.section, .report-header');
+            const navLinks = document.querySelectorAll('.sidebar nav a');
+            
+            let currentSection = '';
+            const scrollPosition = window.scrollY + 100;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', setActiveNavigation);
+        window.addEventListener('load', setActiveNavigation);
+
+        // Handle direct URL navigation
+        window.addEventListener('load', function() {
+            if (window.location.hash) {
+                const target = document.querySelector(window.location.hash);
+                if (target) {
+                    setTimeout(() => {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 100);
+                }
+            }
+        });
+
+        // Print functionality
+        function printReport() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
